@@ -1,6 +1,6 @@
 # java-basics-netbeans
 
-some java basics for self preparation for OCP exam
+some java basics. This is just to test out some java basic concepts
 
 Topics includes:
 Comparator and Comparable interface
