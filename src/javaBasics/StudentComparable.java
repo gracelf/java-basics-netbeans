@@ -1,8 +1,8 @@
-package testComparator;
+package javaBasics;
 
 import java.util.Comparator;
 
-public class Student implements Comparable<Student> {
+public class StudentComparable implements Comparable<StudentComparable> {
 
     private int rollno;
     private String name;
@@ -10,7 +10,7 @@ public class Student implements Comparable<Student> {
     private int age;
 
     // Constructor 
-    public Student(String name, int rollno) {
+    public StudentComparable(String name, int rollno) {
         this.rollno = rollno;
         this.name = name;
     }
@@ -23,30 +23,30 @@ public class Student implements Comparable<Student> {
     }
 
     @Override
-    public int compareTo(Student o) {
+    public int compareTo(StudentComparable o) {
         System.out.println("this.name.compareTo(o.getName())==> " + (this.name.compareTo(o.getName())));
         System.out.println("this.name==> " + this.name + o.getName());
         return this.name.compareTo(o.getName());
     }
 
-    public static class Sortbyroll implements Comparator<Student> {
+    public static class Sortbyroll implements Comparator<StudentComparable> {
         // Used for sorting in ascending order of 
         // roll number 
 
         @Override
-        public int compare(Student a, Student b) {
+        public int compare(StudentComparable a, StudentComparable b) {
             System.out.println("a.getRollno() - b.getRollno()==> " + (a.getRollno() - b.getRollno()));
             System.out.println("a and b" + a.getRollno() + "-" + b.getRollno());
             return a.getRollno() - b.getRollno();
         }
     }
 
-    public static class Sortbyname implements Comparator<Student> {
+    public static class Sortbyname implements Comparator<StudentComparable> {
         // Used for sorting in ascending order of 
         // roll name 
 
         @Override
-        public int compare(Student a, Student b) {
+        public int compare(StudentComparable a, StudentComparable b) {
             return a.getName().compareTo(b.getName());
         }
     }
