@@ -7,3 +7,5 @@ Comparator and Comparable interface
 Runnable and Thread
 HashCode,equal etc
 
+ref: https://examples.javacodegeeks.com/core-java/junit/junit-netbeans-example/
+
