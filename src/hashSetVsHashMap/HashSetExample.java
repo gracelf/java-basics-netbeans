@@ -15,6 +15,8 @@ public class HashSetExample {
         try {
             for (int i = 0; i < 5; i++) {
                 s.add(a[i]);
+                //HashSet does not allow duplicate values, so there will only be one "77" in the set
+                s.add(77);
             }
             System.out.println(s);
             //Tree set are sorted

@@ -17,9 +17,10 @@ public class ConcreteClass extends TestAbstractClass implements TestInterface, T
     public void testInterface2() {
         System.out.println("have to override the abstract method in test interface 2");
     }
-
-    public void testConcreate() {
-        System.out.println("test interface 2");
+    
+    //can have extra method that is not defined in abstract class or interface
+    public void testConcreateOwnMethod() {
+        System.out.println("test Concreate Own Method ");
     }
 
     public static void main(String[] args) {
@@ -42,6 +43,7 @@ public class ConcreteClass extends TestAbstractClass implements TestInterface, T
         con.getDataVal();
         con.testInterface();
         con.testInterface2();
+        con.testConcreateOwnMethod();
 
     }
 }

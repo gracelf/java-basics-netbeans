@@ -1,0 +1,17 @@
+
+
+package designPattern.abstractFactory;
+
+import designPattern.factory.*;
+
+/**
+ *
+ */
+public class Rectangle implements Shape{
+    
+    @Override
+    public void draw(){
+        System.out.print("drawing a rectangle");
+    }
+
+}

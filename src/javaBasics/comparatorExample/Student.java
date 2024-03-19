@@ -2,7 +2,7 @@ package javaBasics.comparatorExample;
 
 import java.util.Comparator;
 
-public class Student implements Comparable<Student> {
+public class Student  {
 
     private int rollno;
     private String name;
@@ -28,29 +28,29 @@ public class Student implements Comparable<Student> {
                 + " " + this.getAge();
     }
 
-    @Override
-    public int compareTo(Student o) {
-        System.out.println("this.name.compareTo(o.getName())==> " + (this.name.compareTo(o.getName())));
-        System.out.println("this.name==> " + this.name + ", compare to name: " + o.getName());
-        return this.name.compareTo(o.getName());
-    }
+//    @Override
+//    public int compareTo(Student o) {
+//        System.out.println("this.name.compareTo(o.getName())==> " + (this.name.compareTo(o.getName())));
+//        System.out.println("this.name==> " + this.name + ", compare to name: " + o.getName());
+//        return this.name.compareTo(o.getName());
+//    }
 
-    @Override
-    public boolean equals(Object student) {
-        if (student instanceof Student) {
-            //compare the object by comparing the name, as defined in the compardTo method
-            return compareTo((Student) student) == 0;
-        } else {
-            return false;
-        }
-    }
+//    @Override
+//    public boolean equals(Object student) {
+//        if (student instanceof Student) {
+//            //compare the object by comparing the name, as defined in the compardTo method
+//            return compareTo((Student) student) == 0;
+//        } else {
+//            return false;
+//        }
+//    }
 
     // We don't use this object in a hash table, but we have to override hashCode function if we override equals function, and also this will satisfy Coverity scan
-    @Override
-    public int hashCode() {
-        assert false : "hashCode not designed";
-        return 42;
-    }
+//    @Override
+//    public int hashCode() {
+//        assert false : "hashCode not designed";
+//        return 42;
+//    }
 
     //Use of comparator interface, external to element class, not comparable interface as in the above example
     public static class SortByRollNum implements Comparator<Student> {
